@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable Annotation Scanning -->
+    <context:component-scan base-package="com.vehiclemanagement.beans" />
+    <context:annotation-config/>
+
+    <!-- Engine bean (Constructor Injection) -->
+    <bean id="engine" class="com.vehiclemanagement.beans.Engine">
+        <constructor-arg name="engineType" value="V8 Turbo"/>
+        <constructor-arg name="horsePower" value="400"/>
+    </bean>
+
+    <!-- Vehicle bean (Constructor + Setter Hybrid) -->
+    <bean id="vehicle" class="com.vehiclemanagement.beans.Vehicle">
+        <constructor-arg name="engine" ref="engine"/>
+        <property name="vehicleName" value="Toyota Fortuner"/>
+    </bean>
+
+    <!-- ServiceCenter bean (Setter Injection) -->
+    <bean id="serviceCenter" class="com.vehiclemanagement.beans.ServiceCenter">
+        <property name="vehicle" ref="vehicle"/>
+        <property name="serviceType" value="Full Engine Checkup"/>
+    </bean>
+
+</beans>
