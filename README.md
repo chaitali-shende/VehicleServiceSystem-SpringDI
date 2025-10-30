@@ -60,30 +60,47 @@ It simulates a simple **Vehicle Manufacturing & Service Management System**, whe
   ## 🏗️ Project Folder Structure
 
   VehicleManufacturingSystem/
+
 │
 ├── src/main/java/
+
 │ ├── com/vehiclemanagement/beans/
+
 │ │ ├── Engine.java
+
 │ │ ├── Tyre.java
+
 │ │ ├── Vehicle.java
+
 │ │ └── ServiceCenter.java
+
 │ │
 │ └── com/vehiclemanagement/main/
+
 │ └── MainApp.java
+
+
 │
 ├── src/main/resources/
+
 │ └── config.xml
+
 │
 ├── pom.xml
+
 └── README.md
 
 ---
 ## Sample Output
 
 === Vehicle Manufacturing & Service System ===
+
 Vehicle Name: Toyota Fortuner
+
 Engine Details: Type = V8 Turbo, HorsePower = 400
+
 Tyre Details: Brand = MRF, Size = 18
+
 Service Type: Full Engine Checkup
 
 
@@ -102,13 +119,3 @@ Combining XML and Annotation configurations effectively
 Structuring maintainable, modular Spring applications
 
 
-
-
-
-
-
-
-
-
-
-re  
